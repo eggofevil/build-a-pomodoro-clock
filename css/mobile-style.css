@@ -1,0 +1,197 @@
+
+@media (orientation: landscape) and (max-width: 640px), (orientation: portrait) {
+    #box {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    #header {
+        font-size: 5vh;
+        margin: 0 auto;
+        padding: 1vh 0vw;
+        padding-left: 1vw;
+        width: 99vw;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 640px) {
+    #timer {
+        width: 99vw;
+        height: 45vh;
+    }
+    #infoScr {
+        font-family: sans-serif;
+        font-size: 12vh;
+    }
+    #remainingTimeScr {
+        font-size: 20vh;
+    }
+    #controls div {
+        width: 33vw;
+        height: 20vh;
+    }
+    #controls div h3 {
+        font-size: 6vh;
+    }
+    #controls div button {
+        height: 10vh;
+        width: 10vw;
+        font-size: 6vh;
+    }
+    #controls div div {
+        height: 10vh;
+        width: 10vw;
+        font-size: 6vh;
+        line-height: 6vh;
+    }
+    #controls button {
+        width: 49.5vw;
+        height: 15vh;
+        font-size: 6vh;
+    }
+    #footer {
+        font-size: 5vh;
+        margin-top: 2vh;
+    }
+}
+
+@media (orientation: portrait) {
+    #box {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    #header {
+        font-size: 5vh;
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 1vw;
+        width: 99vw;
+    }
+    #timer {
+        width: 99vw;
+        height: 35vh;
+    }
+    #infoScr {
+        font-family: sans-serif;
+        font-size: 8vw;
+        top: -85%;
+    }
+    #remainingTimeScr {
+        font-size: 20vw;
+        top: -75%;
+    }
+    #controls div {
+        display: block;
+        height: 12vh;
+        margin: 0 auto;
+        width: 99vw;
+    }
+    #controls div h3 {
+        margin: 0 auto;
+    }
+    #controls button {
+        width: 49.5vw;
+    }
+}
+
+
+
+
+
+/*@media (orientation: portrait) and (max-width: 480px) {
+    #box {
+        font-size: 47px;
+    }
+}
+@media (max-width: 414px) {
+    #box {
+        font-size: 40px;
+    }
+}
+@media (max-width: 384px) {
+    #box {
+        font-size: 37px;
+    }
+}
+@media (max-width: 375px) {
+    #box {
+        font-size: 36px;
+    }
+}
+@media (max-width: 360px) {
+    #box {
+        font-size: 35px;
+    }
+}
+@media (orientation: portrait) and (max-width: 320px) {
+    #box {
+        font-size: 31px;
+    }
+}
+@media (max-width: 854px) and (orientation: portrait) {
+    * {
+        font-family: sans-serif;
+    }
+    #box {
+        margin-top: 0ch;
+        width: 100%;
+        border: none;
+        border-radius: 0%;
+        background: #F5F5F5;
+        box-shadow: none;
+        height: 100vh;
+    }
+    #infoOutputDiv {
+        font-size: 0.8em;
+    }
+    #errOutputDiv {
+        font-size: 0.7em;
+    }
+    #footer {
+        font-size: 0.4em;
+        font-weight: bolder;
+        margin-top: 0.5em;
+    }
+    section {
+        width: 100%;
+    }
+    #screen {
+        height: 25%;
+    }
+    #mainOutputDiv {
+        height: 25%;
+    }
+    #infoOutputDiv {
+        height: 25%;
+    }
+    #errOutputDiv {
+        line-height: 100%;
+        height: 2em;
+    }
+    #controls {
+        height: 55%;
+    }
+    button {
+        height: 20%;
+        width: 25%;
+    }
+    .clearBut {
+        width: 50%;
+    }
+}
+@media (max-width: 854px) and (orientation: landscape) {
+    #box {
+        margin: 0 auto;
+    }
+}*/
