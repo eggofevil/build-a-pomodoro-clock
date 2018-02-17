@@ -29,6 +29,8 @@ var seconds;
 var startState;
 var reset;
 
+var audio = new Audio();
+
 sessionLenBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
         if (btn.textContent === '-') {
@@ -151,6 +153,8 @@ function sliderGrowth() {
 function runTimer() {
     slider.style.width = '0%';
     if (session) {
+        audio.src = 'sound/01071.mp3'; // Указываем путь к звуку "клика"
+        audio.play();
         deg = sessionTimeDeg;
         slider.style.background = 'red';
         remainingTime = sessionTime;
@@ -158,6 +162,8 @@ function runTimer() {
         infoScr.textContent = 'Work session № ' + sessionCounter;
         session = false;
     } else {
+        audio.src = 'sound/double_gong_2.mp3'; // Указываем путь к звуку "клика"
+        audio.play();
         if (sessionCounter === 4) {
             deg = longBreakDeg;
             slider.style.background = 'green';
