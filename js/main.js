@@ -9,6 +9,8 @@ var longBreakLenBtns = Array.prototype.slice.call(document.getElementsByClassNam
 var breakLen = document.getElementById('breakLen');
 var sessionLen = document.getElementById('sessionLen');
 var longBreakLen = document.getElementById('longBreakLen');
+var infoScrP = infoScr.firstChild;
+var remainingTimeScrP = remainingTimeScr.firstChild;
 
 var sliderWidth = 0;
 var sessionTime;
@@ -61,6 +63,7 @@ longBreakLenBtns.forEach(function (btn) {
 });
 
 start_pauseBtn.addEventListener('click', function () {
+    remainingTimeScr.style.fontSize = '';
     if (startState) {
         infoScr.textContent += ' paused';
         startState = false;
@@ -115,6 +118,8 @@ resetBtn.addEventListener('click', function () {
     longBreakLenBtns.forEach(function (btn) {
         btn.removeAttribute('disabled');
     });
+    infoScr.appendChild(infoScrP);
+    remainingTimeScr.appendChild(remainingTimeScrP);
 });
 
 function showRemainingTime() {

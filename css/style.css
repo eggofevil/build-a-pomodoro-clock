@@ -48,11 +48,18 @@ body {
     position: relative;
     top: -95%;
 }
+#infoScr p {
+    margin: 0;
+}
 #remainingTimeScr {
     position: relative;
     top: -90%;
     font-size: 6vh;
     margin: 0 auto;
+}
+#remainingTimeScr p {
+    margin: 0;
+    font-size: 4vh;
 }
 #controls div {
     display: inline-block;
