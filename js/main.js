@@ -1,8 +1,3 @@
-//v5 упрощаем функционал pause / пытаемся сделать одну кнопку start/pause
-//v6 пытаемся добавить длинный перерыв / правим работу RESET (при повторном нажатии стопорит программу, так как снова статус нажатия встает в true)
-//v7 пытаемся добавить оповещение о постановке на паузу
-//v8 отключаем кнопки настройки промежутков сессий после нажатия на START, до момента нажатия на RESET
-
 var slider = document.getElementById('slider');
 var infoScr = document.getElementById('infoScr');
 var remainingTimeScr = document.getElementById('remainingTimeScr');
@@ -35,10 +30,10 @@ var reset;
 sessionLenBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
         if (btn.textContent === '-') {
-            if (Number.parseInt(sessionLen.textContent) <= 1) return null;
-            sessionLen.textContent = Number.parseInt(sessionLen.textContent) - 1;
+            if (parseInt(sessionLen.textContent) <= 1) return null;
+            sessionLen.textContent = parseInt(sessionLen.textContent) - 1;
         } else {
-            sessionLen.textContent = Number.parseInt(sessionLen.textContent) + 1;
+            sessionLen.textContent = parseInt(sessionLen.textContent) + 1;
         }
     });
 });
@@ -46,10 +41,10 @@ sessionLenBtns.forEach(function (btn) {
 breakLenBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
         if (btn.textContent === '-') {
-            if (Number.parseInt(breakLen.textContent) <= 1) return null;
-            breakLen.textContent = Number.parseInt(breakLen.textContent) - 1;
+            if (parseInt(breakLen.textContent) <= 1) return null;
+            breakLen.textContent = parseInt(breakLen.textContent) - 1;
         } else {
-            breakLen.textContent = Number.parseInt(breakLen.textContent) + 1;
+            breakLen.textContent = parseInt(breakLen.textContent) + 1;
         }
     });
 });
@@ -57,10 +52,10 @@ breakLenBtns.forEach(function (btn) {
 longBreakLenBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
         if (btn.textContent === '-') {
-            if (Number.parseInt(longBreakLen.textContent) <= 1) return null;
-            longBreakLen.textContent = Number.parseInt(longBreakLen.textContent) - 1;
+            if (parseInt(longBreakLen.textContent) <= 1) return null;
+            longBreakLen.textContent = parseInt(longBreakLen.textContent) - 1;
         } else {
-            longBreakLen.textContent = Number.parseInt(longBreakLen.textContent) + 1;
+            longBreakLen.textContent = parseInt(longBreakLen.textContent) + 1;
         }
     });
 });
@@ -81,11 +76,11 @@ start_pauseBtn.addEventListener('click', function () {
         longBreakLenBtns.forEach(function (btn) {
             btn.setAttribute('disabled', true);
         });
-        sessionTime = Number.parseInt(sessionLen.textContent) * 60;
+        sessionTime = parseInt(sessionLen.textContent) * 60;
         sessionTimeDeg = 100 / sessionTime;
-        breakTime = Number.parseInt(breakLen.textContent) * 60;
+        breakTime = parseInt(breakLen.textContent) * 60;
         breakTimeDeg = 100 / breakTime;
-        longBreakTime =  Number.parseInt(longBreakLen.textContent) * 60;
+        longBreakTime =  parseInt(longBreakLen.textContent) * 60;
         longBreakDeg = 100 / longBreakTime;
         startState = true;
     }
